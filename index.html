@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="" method="POST" onsubmit="sendRequest(event)">
+
+        <input type="text" name="name" id="name" placeholder="nom" required>
+        <input type="text" name="firstname" id="firstname" placeholder="prenom" required>
+        <input type="email" name="email" id="emailAddress" placeholder="mail" required>
+        <input type="email" name="confirmationemail" id="confirmationemail" placeholder="confirm mail" required>
+        <input type="text" name="sujet" id="sujet" placeholder="sujet" required>
+        <textarea id="msg" name="message" placeholder="votre message" required></textarea>
+        <input type="submit" onclick="confirmEmail(), messageVide()" value="Envoyer">
+
+    </form>
+
+    <script src="form.js">
+    </script>
+</body>
+
+</html>

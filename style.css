@@ -1,0 +1,73 @@
+form {
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, minmax(50px, auto));
+    grid-template-areas: "nom" "prenom" "mail" "confmail" "sujet" "message" "submit";
+    top: 10px;
+}
+
+input,
+textarea {
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: large;
+}
+
+@media screen and (min-width: 768px) {
+    form {
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "nom prenom" "mail confmail" "sujet sujet" "message message" "submit submit";
+    }
+}
+
+input[name=name] {
+    grid-area: nom;
+}
+
+input[name=firstname] {
+    grid-area: prenom;
+}
+
+input[name=email] {
+    grid-area: mail;
+}
+
+input[name=confirmationemail] {
+    grid-area: confmail;
+}
+
+input[name=sujet] {
+    grid-area: sujet;
+}
+
+textarea[name=message] {
+    grid-area: message;
+}
+
+input[type=submit] {
+    grid-area: submit;
+}
+
+input[type=submit]:hover {
+    font-size: 125%;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+::selection {
+    background: #4985df;
+}
+
+.bordure {
+    background-color: red;
+}
